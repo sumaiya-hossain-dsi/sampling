@@ -10,10 +10,51 @@ Modify the number of repetitions in the simulation to 100 (from the original 100
 
 Alter the code so that it is reproducible. Describe the changes you made to the code and how they affected the reproducibility of the script file. The output does not need to match Whitby’s original blogpost/graphs, it just needs to produce the same output when run multiple times
 
-# Author: YOUR NAME
+# Author: Sumaiya Hossain
 
 ```
-Please write your explanation here...
+**# Assignment: Sampling and Reproducibility in Python**
+
+## **Analysis of Sampling in the Model**
+The simulation model in `whitby_covid_tracing.py` demonstrates how contact tracing can create a biased sample of COVID-19 cases by disproportionately identifying infections from large, structured events (e.g., weddings) over smaller, less structured gatherings (e.g., brunches). 
+
+### **Stages of Sampling in the Model**
+#### **1. Event Simulation (`simulate_event(m)`)**
+- The model consists of a fixed number of people who attend various events.
+- Two types of events are simulated:
+  - **Weddings** (large, structured, easy to trace)
+  - **Brunches** (small, informal, harder to trace)
+- Each person at an event has a **10% infection probability**, modeled using a binomial distribution (`np.random.binomial`).
+
+#### **2. Primary Contact Tracing**
+- Once infections occur, a **20% probability of being traced** is applied to each case (`TRACE_SUCCESS = 0.20`).
+- This step creates **sampling bias**, as only a fraction of cases are recorded and linked to an event.
+
+#### **3. Secondary Contact Tracing**
+- If **two or more infections** from the same event are traced, the model assumes a full investigation of that event, identifying **all infections** at that event.
+- This further **amplifies the bias**, as large, structured events like weddings are disproportionately overrepresented in the traced sample.
+
+#### **4. Repetitions in Simulation (`repetitions = 1000`)**
+- The simulation runs 1000 times (`for _ in range(repetitions):`), aggregating results to produce a final histogram.
+
+## **Comparison to Whitby’s Blog Post Results**
+Running the script as provided produced a figure closely resembling the one in Whitby’s article. The histogram clearly showed an overrepresentation of infections from weddings in traced cases, confirming the bias described in the blog post.
+
+## **Reproducibility Analysis**
+To test reproducibility, we reduced the number of repetitions from **1000 to 100** and observed the results across multiple runs. The histograms varied significantly, indicating a lack of reproducibility due to the stochastic nature of the model.
+
+To fix this, we introduced a **random seed** (`np.random.seed(42)`) before any random operations. This ensured that the model produced identical outputs across multiple runs, improving reproducibility.
+
+## **Final Modifications for Reproducibility**
+1. **Reduced repetitions to 100**: 
+   - Highlighted the variability of outputs in stochastic simulations.
+2. **Introduced `np.random.seed(42)`**:
+   - Ensured consistency in results across multiple executions.
+   - Made the model **fully reproducible** while maintaining the original bias effects.
+
+## **Conclusion**
+This exercise demonstrates how sampling bias arises in contact tracing due to the disproportionate tracing of large, structured events. It also underscores the importance of reproducibility in simulations, which can be achieved by setting a **random seed**. The final modified script now produces **consistent** results while accurately reflecting the bias in the original model.
+
 
 ```
 
