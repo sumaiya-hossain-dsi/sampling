@@ -12,9 +12,6 @@ Alter the code so that it is reproducible. Describe the changes you made to the 
 
 # Author: Sumaiya Hossain
 
-```
-**# Assignment: Sampling and Reproducibility in Python**
-
 ## **Analysis of Sampling in the Model**
 The simulation model in `whitby_covid_tracing.py` demonstrates how contact tracing can create a biased sample of COVID-19 cases by disproportionately identifying infections from large, structured events (e.g., weddings) over smaller, less structured gatherings (e.g., brunches). 
 
@@ -55,8 +52,6 @@ To fix this, we introduced a **random seed** (`np.random.seed(42)`) before any r
 ## **Conclusion**
 This exercise demonstrates how sampling bias arises in contact tracing due to the disproportionate tracing of large, structured events. It also underscores the importance of reproducibility in simulations, which can be achieved by setting a **random seed**. The final modified script now produces **consistent** results while accurately reflecting the bias in the original model.
 
-
-```
 
 
 ## Criteria
