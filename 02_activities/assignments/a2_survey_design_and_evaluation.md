@@ -40,30 +40,63 @@ For the **Canadian General Social Survey on Giving, Volunteering, and Participat
 
 ## Part A - Survey Design: 
 
-The number of your chosen topic: `#`
+The number of your chosen topic: `3`
 
 Describe the purpose of your survey:
 ```
-write your answer here...
+The purpose of this survey is to investigate how age influences music taste, particularly in relation to perceptions of popular music. The study aims to compare musical preferences across different age groups and examine changes in individual music tastes over time.
+
 ```
 
 Describe your target population, sampling frame, sampling units, and observational units:
 ```
-write your answer here...
+Target Population: Individuals aged 18 and above residing in Toronto, Ontario.
+
+Sampling Frame: A comprehensive list of Toronto residents aged 18 and above, which could be obtained from municipal records, voter registration lists, or commercial databases.
+
+Sampling Units: Individual residents within the specified age range in Toronto.
+
+Sampling Strategy: A stratified random sampling method will be employed to ensure representation across various age cohorts (e.g., 18-29, 30-39, 40-49, etc.). Within each age stratum, participants will be randomly selected to participate in the survey.
+
 ```
 
 Your 5-10 question survey:
 ```
-1. write your question here...
-2. write your question here...
-3. write your question here...
-4. write your question here...
-5. write your question here...
-6. write your question here... (optional)
-7. write your question here... (optional)
-8. write your question here... (optional)
-9. write your question here... (optional)
-10. write your question here... (optional)
+1. What is your age?
+2. What is your gender?
+3. On a scale from 1 to 10, how much do you enjoy the following genres of music? (1 = Do not enjoy at all, 10 = Enjoy very much) 
+    Pop
+    Rock
+    Hip-hop/Rap
+    Classical
+    Jazz
+    Country
+    Electronic/Dance
+    Other (please specify)
+4. In your opinion, how has popular music changed since you were a teenager?
+    Improved
+    Stayed the same
+    Declined
+    Not sure
+5. How often do you listen to current popular music?
+    Daily
+    Several times a week
+    Once a week
+    Rarely
+    Never
+6. Reflecting on your life, how have your music preferences changed over the years? (Select all that apply)
+    I listen to a wider variety of genres now.
+    I prefer music from my youth.
+    I have developed an interest in new genres.
+    My music taste has remained consistent.
+    Other (please specify)
+7. Which of the following have significantly influenced your music taste? (Select all that apply)
+    Friends and family
+    Radio and television
+    Social media and streaming platforms
+    Live concerts and events
+    Other (please specify)
+
 ```
 
 ## Part B - Survey Evaluation:
@@ -71,7 +104,27 @@ Your 5-10 question survey:
 Identify and describe survey features:
 
 ```
-write your answer here
+Sample Type: The survey employed a stratified design using probability sampling. Stratification was based on geographic areas at the province and census metropolitan area (CMA) levels. 
+
+Sample Size: The field sample consisted of approximately 50,000 units, with about 40,000 invitation letters sent to selected households across Canada. The survey aimed for the completion of 24,000 questionnaires. 
+
+Target Population: Individuals aged 15 years and older living in private households across the ten provinces of Canada, excluding full-time residents of institutions. 
+
+Sampling Frame: The survey utilized a frame combining landline and cellular telephone numbers from the Census and various administrative sources with Statistics Canada's dwelling frame. 
+
+Survey Mode(s): Data collection was conducted through electronic questionnaires and telephone interviews. 
+
+Timeline: Data collection occurred from September 4, 2018, to December 28, 2018. 
+
+Response Rate: Specific response rate details are not provided in the available documentation.
+
+Weights: A weighting factor (WGHT_PER) was applied to ensure that estimates represented the target population accurately. Adjustments were made to align the weighted income distribution with the 2017 Canadian Income Survey distribution by province. 
+ 
+Data Processing: Data processing involved editing, coding, and verification to ensure accuracy and consistency.
+
+Sources of Error: Potential sources of error include sampling error, non-response bias, and measurement error.
+
+Limitations and Known Biases: The survey excludes residents of the territories and full-time institutional residents, which may limit the generalizability of the findings to these populations.
 ```
 
 ## Rubric
